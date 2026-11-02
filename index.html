@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jatizakaya — Izakaya di sudut Jatinegara</title>
+<meta name="description" content="Ramen, yakitori, dan bento dari kedai makan Jaktim × Jepang di Jatinegara. Lihat menu dan pesan online.">
+<meta name="theme-color" content="#14100e">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="id_ID">
+<meta property="og:site_name" content="Jatizakaya">
+<meta property="og:title" content="Jatizakaya — Izakaya di sudut Jatinegara">
+<meta property="og:description" content="Ramen, yakitori, dan bento dari kedai makan Jaktim × Jepang di Jatinegara. Lihat menu dan pesan online.">
+<meta property="og:image" content="assets/images/brand/kedai-1000.webp">
+<link rel="icon" type="image/png" sizes="48x48" href="assets/images/brand/favicon-48.png">
+<link rel="apple-touch-icon" href="assets/images/brand/favicon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/pages.css">
+</head>
+<body data-page="home">
+<main id="main">
+<noscript><p style="padding:1rem;background:#f0922b;color:#14100e;font-weight:700">Situs ini membutuhkan JavaScript untuk menu, keranjang, dan checkout. Aktifkan JavaScript atau hubungi kami lewat WhatsApp.</p></noscript>
+<section class="hero on-dark" aria-labelledby="hero-title">
+  <div class="hero-text">
+    <p class="eyebrow">Jatinegara × Izakaya</p>
+    <h1 id="hero-title">Izakaya di sudut <em>Jatinegara.</em></h1>
+    <p class="lead">Ramen, yakitori, dan bento dari kedai makan Jaktim × Jepang di Jl. Matraman Raya. Makan di tempat, bawa pulang, atau diantar.</p>
+    <div class="cta">
+      <a class="btn btn-primary" href="menu.html">Lihat menu &amp; pesan</a>
+      <a class="btn btn-ghost" href="kontak.html#reservasi">Reservasi meja</a>
+    </div>
+  </div>
+  <figure class="hero-media">
+    <img src="assets/images/brand/kedai-1000.webp"
+         srcset="assets/images/brand/kedai-1000.webp 1000w, assets/images/brand/kedai-1920.webp 1920w"
+         sizes="(min-width: 900px) 58vw, 100vw" width="1920" height="1072" fetchpriority="high"
+         alt="Kedai Jatizakaya di sudut Jl. Matraman Raya saat senja: lampion kertas menggantung di bawah awning marun, pengunjung duduk di meja dekat jendela, motor melintas di jalan.">
+  </figure>
+</section>
+
+<section class="infostrip" aria-label="Informasi singkat">
+  <div class="container">
+    <div class="info-item"><p class="k">Alamat</p><p class="v" data-bind="address"></p></div>
+    <div class="info-item"><p class="k">Jam buka</p><p class="v" data-bind="hours"></p></div>
+    <div class="info-item"><p class="k">Pesan lewat</p><p class="v">Situs ini, atau <a data-bind="wa-link" href="#" target="_blank" rel="noopener noreferrer">WhatsApp <span class="sr-only">(tab baru)</span></a></p></div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="fav-title">
+  <div class="container">
+    <div class="section-head">
+      <div><p class="eyebrow">Menu andalan</p><h2 id="fav-title">Favorit kedai</h2></div>
+      <a class="text-link" href="menu.html">Lihat semua menu <span aria-hidden="true">→</span></a>
+    </div>
+    <div class="fav-grid" id="fav-grid"></div>
+  </div>
+</section>
+
+<section class="section on-dark" style="background:var(--ink-2)" aria-labelledby="story-title">
+  <div class="container story">
+    <div>
+      <p class="eyebrow">Cerita kedai</p>
+      <h2 id="story-title">Dua kebiasaan, satu meja.</h2>
+      <p>Di Jepang, izakaya adalah tempat singgah: duduk, pesan beberapa piring kecil, lalu mengobrol lama. Jatinegara punya kebiasaannya sendiri: kedai di pinggir jalan, kopi, dan obrolan yang tidak diburu waktu.</p>
+      <p>Jatizakaya mempertemukan keduanya. Ramen berkuah pekat, yakitori panggang, bento untuk makan siang, dan minuman dingin untuk menutup hari.</p>
+    </div>
+    <div class="story-logo"><img src="assets/images/brand/logo-full.webp" width="1600" height="1066" loading="lazy" alt="Logo Jatizakaya: lampion bertuliskan 居酒屋 di dalam segitiga, uap naik dari semangkuk ramen"></div>
+  </div>
+</section>
+
+<section class="section promos" aria-labelledby="promo-title" id="promo">
+  <div class="container">
+    <div class="section-head"><div><p class="eyebrow">Promo</p><h2 id="promo-title">Dua promo, tinggal pakai kode.</h2></div></div>
+    <div class="promo-grid" id="promo-grid"></div>
+    <p class="fine" style="color:#f2dcc6;margin-top:1.25rem">Satu kode per pesanan. Kode diterapkan di keranjang dan checkout.</p>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="place-title" id="lokasi">
+  <div class="container place">
+    <div>
+      <p class="eyebrow">Lokasi &amp; kontak</p>
+      <h2 id="place-title">Mampir ke Matraman Raya.</h2>
+      <address data-bind="address"></address>
+      <div id="home-social"></div>
+    </div>
+    <dl>
+      <div><dt>Jam operasional</dt><dd data-bind="hours"></dd></div>
+      <div><dt>WhatsApp</dt><dd><a data-bind="wa-link" href="#" target="_blank" rel="noopener noreferrer"><span data-bind="wa-display"></span> <span class="sr-only">(tab baru)</span></a></dd></div>
+      <div><dt>Mau datang ramai-ramai?</dt><dd><a href="kontak.html#reservasi">Kirim permintaan reservasi meja</a></dd></div>
+    </dl>
+  </div>
+</section>
+</main>
+<script src="js/config.js"></script>
+<script src="js/data/menu.js"></script>
+<script src="js/store.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/home.js"></script>
+</body>
+</html>

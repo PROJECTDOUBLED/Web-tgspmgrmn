@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kontak & reservasi — Jatizakaya</title>
+<meta name="description" content="Alamat, WhatsApp, media sosial, dan permintaan reservasi meja Jatizakaya.">
+<meta name="theme-color" content="#14100e">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="id_ID">
+<meta property="og:site_name" content="Jatizakaya">
+<meta property="og:title" content="Kontak & reservasi — Jatizakaya">
+<meta property="og:description" content="Alamat, WhatsApp, media sosial, dan permintaan reservasi meja Jatizakaya.">
+<meta property="og:image" content="assets/images/brand/kedai-1000.webp">
+<link rel="icon" type="image/png" sizes="48x48" href="assets/images/brand/favicon-48.png">
+<link rel="apple-touch-icon" href="assets/images/brand/favicon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/pages.css">
+</head>
+<body data-page="kontak">
+<main id="main">
+<noscript><p style="padding:1rem;background:#f0922b;color:#14100e;font-weight:700">Situs ini membutuhkan JavaScript untuk menu, keranjang, dan checkout. Aktifkan JavaScript atau hubungi kami lewat WhatsApp.</p></noscript>
+<section class="page-head on-dark"><div class="container"><p class="eyebrow">Kontak &amp; reservasi</p><h1>Datang, atau sapa kami dulu.</h1></div></section>
+<section class="section" style="padding-bottom:0"><div class="container two">
+  <div>
+    <h2 style="font-size:1.8rem;margin-bottom:1rem">Alamat &amp; jam</h2>
+    <address style="font-style:normal;max-width:36ch" data-bind="address"></address>
+    <dl class="kv" style="margin-top:1rem"><dt>Jam buka</dt><dd data-bind="hours"></dd><dt>WhatsApp</dt><dd><a data-bind="wa-link" href="#" target="_blank" rel="noopener noreferrer"><span data-bind="wa-display"></span> <span class="sr-only">(tab baru)</span></a></dd></dl>
+    <div id="contact-social" style="margin-top:1.5rem"></div>
+  </div>
+  <div id="reservasi">
+    <h2 style="font-size:1.8rem;margin-bottom:.5rem">Reservasi meja</h2>
+    <p class="help" style="margin-bottom:1.25rem">Formulir ini menyiapkan pesan WhatsApp ke kedai. Reservasi baru dianggap terkonfirmasi setelah kedai membalas.</p>
+    <form id="rsv-form" novalidate>
+      <div class="form-field"><label for="r-name">Nama</label><input id="r-name" type="text" autocomplete="name" maxlength="60" required><p class="err" id="re-name" role="alert" hidden></p></div>
+      <div class="form-field"><label for="r-phone">Nomor WhatsApp</label><input id="r-phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="0812 3456 7890" required><p class="err" id="re-phone" role="alert" hidden></p></div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:0 1rem">
+        <div class="form-field"><label for="r-date">Tanggal</label><input id="r-date" type="date" required><p class="err" id="re-date" role="alert" hidden></p></div>
+        <div class="form-field"><label for="r-time">Jam datang</label><input id="r-time" type="time" required><p class="err" id="re-time" role="alert" hidden></p></div>
+      </div>
+      <div class="form-field"><label for="r-guests">Jumlah tamu</label><input id="r-guests" type="number" inputmode="numeric" min="1" max="15" value="2" required><p class="err" id="re-guests" role="alert" hidden></p></div>
+      <div class="form-field"><label for="r-note">Catatan <span class="req">Opsional</span></label><textarea id="r-note" rows="2" maxlength="150" placeholder="Ulang tahun, kursi bayi, dll."></textarea></div>
+      <button type="submit" class="btn btn-primary btn-block">Siapkan pesan WhatsApp</button>
+    </form>
+    <div id="rsv-done" class="alert-ok" hidden role="status" style="margin-top:1rem"></div>
+  </div>
+</div></section>
+<section class="section" aria-labelledby="faq-title"><div class="container" style="max-width:820px">
+  <h2 id="faq-title" style="font-size:1.8rem;margin-bottom:1rem">Pertanyaan umum</h2>
+  <div class="faq">
+    <details><summary>Bagaimana cara memesan lewat situs ini?</summary><p>Buka Menu, pilih menu dan variannya, tambahkan ke pesanan, lalu checkout. Di akhir kamu bisa mengirim ringkasan pesanan ke WhatsApp kedai.</p></details>
+    <details><summary>Apakah pembayarannya sungguhan?</summary><p>Belum. Metode pembayaran di situs ini adalah simulasi untuk keperluan demonstrasi: tidak ada uang yang diproses dan data rekening atau QR yang tampil hanya contoh.</p></details>
+    <details><summary>Apakah pesanan saya tersimpan?</summary><p>Pesanan tersimpan hanya di browser perangkat ini, bukan di server. Menghapus data browser akan menghapus riwayatnya.</p></details>
+    <details><summary>Bisakah pesan antar?</summary><p>Pilihan pesan antar tersedia di checkout dengan ongkir dan minimum belanja yang tertera. Pelacakan kurir belum tersedia; estimasi tiba dikonfirmasi lewat WhatsApp.</p></details>
+    <details><summary>Bagaimana dengan alergi atau kebutuhan khusus?</summary><p>Tulis di kolom catatan saat memilih menu, dan konfirmasikan langsung ke kedai lewat WhatsApp sebelum memesan.</p></details>
+  </div>
+</div></section>
+</main>
+<script src="js/config.js"></script>
+<script src="js/data/menu.js"></script>
+<script src="js/store.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/contact-page.js"></script>
+</body>
+</html>

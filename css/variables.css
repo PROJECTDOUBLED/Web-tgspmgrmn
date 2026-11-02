@@ -1,0 +1,32 @@
+/* Jatizakaya — design tokens
+   Palet diambil dari aset asli: hitam logo, cahaya lampion oranye, dan awning marun pada foto kedai.
+   Merah/cokelat dari proyek lama (#D92323 / #C06C2C) dipertahankan sebagai turunan: ember & lantern. */
+:root {
+  --ink: #14100e;
+  --ink-2: #1e1814;
+  --ink-3: #2b231d;
+  --paper: #f3ecdf;
+  --paper-2: #e9dfcc;
+  --paper-3: #ddd0b8;
+  --lantern: #f0922b;
+  --lantern-text: #8f4607;        /* teks oranye di atas kertas (kontras ≥ 5:1) */
+  --awning: #7c1d1b;
+  --ember: #b3261e;               /* error / hapus */
+  --ok: #2f6b3a;
+
+  --text: #1b1511;
+  --muted: #5b5045;               /* di atas paper: ≥ 6:1 */
+  --text-dark: #f3ecdf;
+  --muted-dark: #c2b6a5;          /* di atas ink: ≥ 8:1 */
+  --line: rgba(20, 16, 14, .18);
+  --line-dark: rgba(243, 236, 223, .16);
+  --focus: #0b57d0;
+
+  --font-display: 'Bricolage Grotesque', 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+
+  --radius: 3px;
+  --header-h: 64px;
+  --space: clamp(3rem, 7vw, 6rem);
+  --ease: cubic-bezier(.2, .7, .2, 1);
+}

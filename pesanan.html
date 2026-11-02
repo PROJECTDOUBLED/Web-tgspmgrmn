@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pesanan saya — Jatizakaya</title>
+<meta name="description" content="Detail, status, dan riwayat pesanan simulasi Jatizakaya yang tersimpan di perangkat ini.">
+<meta name="theme-color" content="#14100e">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="id_ID">
+<meta property="og:site_name" content="Jatizakaya">
+<meta property="og:title" content="Pesanan saya — Jatizakaya">
+<meta property="og:description" content="Detail, status, dan riwayat pesanan simulasi Jatizakaya yang tersimpan di perangkat ini.">
+<meta property="og:image" content="assets/images/brand/kedai-1000.webp">
+<link rel="icon" type="image/png" sizes="48x48" href="assets/images/brand/favicon-48.png">
+<link rel="apple-touch-icon" href="assets/images/brand/favicon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/pages.css">
+</head>
+<body data-page="pesanan">
+<main id="main">
+<noscript><p style="padding:1rem;background:#f0922b;color:#14100e;font-weight:700">Situs ini membutuhkan JavaScript untuk menu, keranjang, dan checkout. Aktifkan JavaScript atau hubungi kami lewat WhatsApp.</p></noscript>
+<section class="page-head on-dark"><div class="container"><p class="eyebrow" id="ph-eyebrow">Pesanan</p><h1 id="ph-title">Pesanan saya</h1><p class="sub" id="ph-sub"></p></div></section>
+<div class="container" id="view"></div>
+<dialog id="confirm-dialog" class="sheet" aria-labelledby="cf-title" style="max-width:440px;margin:auto;flex-direction:column;border-radius:var(--radius)">
+  <form method="dialog" style="padding:1.5rem;display:grid;gap:1rem">
+    <h2 id="cf-title" style="font-size:1.4rem"></h2><p id="cf-msg"></p>
+    <div style="display:flex;gap:.6rem;justify-content:flex-end;flex-wrap:wrap"><button class="btn btn-ghost" value="no" id="cf-no">Batal</button><button class="btn btn-danger" value="yes" id="cf-yes">Ya</button></div>
+  </form>
+</dialog>
+</main>
+<script src="js/config.js"></script>
+<script src="js/data/menu.js"></script>
+<script src="js/store.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/order-page.js"></script>
+</body>
+</html>

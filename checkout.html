@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Checkout — Jatizakaya</title>
+<meta name="description" content="Selesaikan pesananmu: data pemesan, jenis pemesanan, dan metode pembayaran (simulasi).">
+<meta name="theme-color" content="#14100e">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="id_ID">
+<meta property="og:site_name" content="Jatizakaya">
+<meta property="og:title" content="Checkout — Jatizakaya">
+<meta property="og:description" content="Selesaikan pesananmu: data pemesan, jenis pemesanan, dan metode pembayaran (simulasi).">
+<meta property="og:image" content="assets/images/brand/kedai-1000.webp">
+<link rel="icon" type="image/png" sizes="48x48" href="assets/images/brand/favicon-48.png">
+<link rel="apple-touch-icon" href="assets/images/brand/favicon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/pages.css">
+</head>
+<body data-page="checkout">
+<main id="main">
+<noscript><p style="padding:1rem;background:#f0922b;color:#14100e;font-weight:700">Situs ini membutuhkan JavaScript untuk menu, keranjang, dan checkout. Aktifkan JavaScript atau hubungi kami lewat WhatsApp.</p></noscript>
+<section class="page-head on-dark"><div class="container"><p class="eyebrow">Checkout</p><h1>Tinggal sedikit lagi.</h1></div></section>
+<div class="container">
+  <div id="co-empty" class="empty" hidden>
+    <p class="empty-t">Pesananmu masih kosong.</p><p>Tambahkan menu dulu sebelum checkout.</p>
+    <a class="btn btn-primary" href="menu.html">Kembali ke menu</a>
+  </div>
+  <div class="co-grid" id="co-main" hidden>
+    <form id="co-form" class="co-form" novalidate>
+      <div class="notice" style="margin-bottom:1.75rem"><strong>Ini simulasi.</strong> Pesanan tersimpan di browser ini saja dan tidak dikirim ke dapur. Tidak ada uang yang diproses, dan jangan masukkan data kartu. Di akhir kamu bisa mengirim ringkasan pesanan lewat WhatsApp.</div>
+
+      <fieldset>
+        <legend><span class="n" aria-hidden="true">1</span>Data pemesan</legend>
+        <div class="form-field"><label for="f-name">Nama</label><input id="f-name" name="name" type="text" autocomplete="name" maxlength="60" required><p class="err" id="e-name" role="alert" hidden></p></div>
+        <div class="form-field"><label for="f-phone">Nomor WhatsApp / telepon</label><input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="0812 3456 7890" required aria-describedby="h-phone"><p class="help" id="h-phone">Dipakai kedai untuk menghubungi soal pesananmu.</p><p class="err" id="e-phone" role="alert" hidden></p></div>
+      </fieldset>
+
+      <fieldset>
+        <legend><span class="n" aria-hidden="true">2</span>Jenis pemesanan</legend>
+        <div class="radio-cards" id="type-cards" role="radiogroup" aria-label="Jenis pemesanan"></div>
+        <p class="err" id="e-type" role="alert" hidden></p>
+
+        <div class="cond" id="c-dinein" hidden>
+          <div class="form-field"><label for="f-table">Nomor meja <span class="req">Opsional</span></label><input id="f-table" name="table" type="text" maxlength="4" autocomplete="off" inputmode="text" aria-describedby="h-table"><p class="help" id="h-table">Kosongkan jika belum duduk; kasir akan menanyakan.</p><p class="err" id="e-table" role="alert" hidden></p></div>
+        </div>
+        <div class="cond" id="c-takeaway" hidden>
+          <div class="radio-cards" role="radiogroup" aria-label="Waktu pengambilan">
+            <label class="radio-card"><input type="radio" name="pickup" value="asap" checked><span><strong>Secepatnya</strong><span>Kedai menyiapkan setelah pesanan dikonfirmasi.</span></span></label>
+            <label class="radio-card"><input type="radio" name="pickup" value="later"><span><strong>Jadwalkan hari ini</strong><span>Pilih jam ambil, minimal 15 menit dari sekarang.</span></span></label>
+          </div>
+          <div class="form-field" id="pickup-time-wrap" hidden style="margin-top:.75rem"><label for="f-pickup">Jam pengambilan</label><input id="f-pickup" name="pickupTime" type="time"><p class="err" id="e-pickup" role="alert" hidden></p></div>
+          <p class="help" style="margin-top:.75rem">Ambil di: <span data-bind="addressShort"></span></p>
+        </div>
+        <div class="cond" id="c-delivery" hidden>
+          <div class="form-field"><label for="f-address">Alamat lengkap</label><textarea id="f-address" name="address" rows="3" maxlength="200" autocomplete="street-address" aria-describedby="h-addr"></textarea><p class="help" id="h-addr">Nama jalan, nomor, kelurahan.</p><p class="err" id="e-address" role="alert" hidden></p></div>
+          <div class="form-field"><label for="f-detail">Detail alamat <span class="req">Opsional</span></label><input id="f-detail" name="addressDetail" type="text" maxlength="80" placeholder="RT/RW, blok, lantai, nomor unit"></div>
+          <div class="form-field"><label for="f-landmark">Patokan <span class="req">Opsional</span></label><input id="f-landmark" name="landmark" type="text" maxlength="80" placeholder="Dekat warung, pagar warna, dll."></div>
+          <div class="form-field"><label for="f-courier">Catatan untuk kurir <span class="req">Opsional</span></label><input id="f-courier" name="courierNote" type="text" maxlength="100"></div>
+          <p class="help">Pengantaran belum terhubung ke peta atau pelacakan kurir. Estimasi waktu tiba dikonfirmasi kedai lewat WhatsApp.</p>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend><span class="n" aria-hidden="true">3</span>Pembayaran <span class="req" style="font-family:var(--font-body)">(simulasi)</span></legend>
+        <div class="radio-cards" id="pay-cards" role="radiogroup" aria-label="Metode pembayaran"></div>
+        <p class="err" id="e-pay" role="alert" hidden></p>
+      </fieldset>
+
+      <div class="co-submit">
+        <p class="err" id="e-form" role="alert" hidden style="margin-bottom:.5rem"></p>
+        <button type="submit" class="btn btn-primary btn-block" id="co-submit">Buat pesanan · <span id="co-total"></span></button>
+      </div>
+    </form>
+
+    <aside class="co-summary" aria-labelledby="sum-title">
+      <details id="sum-details" open>
+        <summary><span id="sum-title">Ringkasan pesanan</span><span class="sum-n" id="sum-n"></span></summary>
+        <div class="sum-lines" id="sum-lines"></div>
+        <button type="button" class="link-btn" id="edit-order" style="margin:-.5rem 0 .5rem -.5rem;color:var(--lantern)">Ubah pesanan</button>
+        <div class="promo-box" id="co-promo" style="margin-top:.25rem"></div>
+        <dl class="totals" id="sum-totals" style="margin-top:1.25rem"></dl>
+        <div class="sum-err" id="sum-err" hidden></div>
+      </details>
+    </aside>
+  </div>
+</div>
+</main>
+<script src="js/config.js"></script>
+<script src="js/data/menu.js"></script>
+<script src="js/store.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/checkout.js"></script>
+</body>
+</html>

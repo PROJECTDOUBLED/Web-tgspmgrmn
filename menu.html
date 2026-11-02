@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Menu — Jatizakaya</title>
+<meta name="description" content="Daftar menu Jatizakaya: ramen, yakitori, bento, dan minuman. Cari, filter, pilih varian, lalu pesan.">
+<meta name="theme-color" content="#14100e">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="id_ID">
+<meta property="og:site_name" content="Jatizakaya">
+<meta property="og:title" content="Menu — Jatizakaya">
+<meta property="og:description" content="Daftar menu Jatizakaya: ramen, yakitori, bento, dan minuman. Cari, filter, pilih varian, lalu pesan.">
+<meta property="og:image" content="assets/images/brand/kedai-1000.webp">
+<link rel="icon" type="image/png" sizes="48x48" href="assets/images/brand/favicon-48.png">
+<link rel="apple-touch-icon" href="assets/images/brand/favicon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/pages.css">
+</head>
+<body data-page="menu">
+<main id="main">
+<noscript><p style="padding:1rem;background:#f0922b;color:#14100e;font-weight:700">Situs ini membutuhkan JavaScript untuk menu, keranjang, dan checkout. Aktifkan JavaScript atau hubungi kami lewat WhatsApp.</p></noscript>
+<section class="page-head on-dark">
+  <div class="container">
+    <p class="eyebrow">Menu</p>
+    <h1>Pilih, tambah, pesan.</h1>
+    <p class="sub">Ketuk menu untuk memilih level pedas, porsi, atau tambahan. Harga menyesuaikan pilihanmu.</p>
+  </div>
+</section>
+<div class="toolbar">
+  <div class="container tb">
+    <div class="search"><label for="q" class="sr-only">Cari menu</label><svg class="icon" aria-hidden="true"><use href="#i-search"/></svg>
+      <input id="q" type="search" placeholder="Cari menu, mis. matcha atau ramen" autocomplete="off" enterkeyhint="search"></div>
+    <div class="sort"><label for="sort" class="sr-only">Urutkan menu</label>
+      <select id="sort"><option value="rec">Rekomendasi</option><option value="asc">Termurah</option><option value="desc">Termahal</option><option value="name">Nama A–Z</option></select></div>
+    <div class="chips" id="chips" role="group" aria-label="Filter kategori"></div>
+  </div>
+</div>
+<div class="container menu-results" id="results"></div>
+<p class="sr-only" id="count" role="status" aria-live="polite"></p>
+</main>
+<script src="js/config.js"></script>
+<script src="js/data/menu.js"></script>
+<script src="js/store.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/menu-page.js"></script>
+</body>
+</html>

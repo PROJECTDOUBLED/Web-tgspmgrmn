@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ketentuan & privasi — Jatizakaya</title>
+<meta name="description" content="Ketentuan pemesanan, data yang disimpan di browser, dan batasan prototipe situs Jatizakaya.">
+<meta name="theme-color" content="#14100e">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="id_ID">
+<meta property="og:site_name" content="Jatizakaya">
+<meta property="og:title" content="Ketentuan & privasi — Jatizakaya">
+<meta property="og:description" content="Ketentuan pemesanan, data yang disimpan di browser, dan batasan prototipe situs Jatizakaya.">
+<meta property="og:image" content="assets/images/brand/kedai-1000.webp">
+<link rel="icon" type="image/png" sizes="48x48" href="assets/images/brand/favicon-48.png">
+<link rel="apple-touch-icon" href="assets/images/brand/favicon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/pages.css">
+</head>
+<body data-page="info">
+<main id="main">
+<section class="page-head on-dark"><div class="container"><p class="eyebrow">Informasi</p><h1>Ketentuan &amp; privasi</h1></div></section>
+<div class="container prose">
+  <h2>Tentang situs ini</h2>
+  <p>Jatizakaya adalah konsep restoran fiktif hasil proyek kelompok mahasiswa. Situs ini adalah prototipe: pemesanan, pembayaran, dan status pesanan berjalan sebagai simulasi di browser.</p>
+  <h2>Ketentuan pemesanan (demo)</h2>
+  <ul>
+    <li>Harga, biaya kemasan, ongkir, pajak, dan promo yang tampil adalah nilai demonstrasi yang diatur di <code>js/config.js</code>.</li>
+    <li>Pesan antar memiliki minimum belanja dan ongkir flat sesuai konfigurasi.</li>
+    <li>Satu kode promo per pesanan. Promo yang ada: diskon 20% untuk ramen, dan beli 3 gratis 1 untuk yakitori.</li>
+    <li>Pesanan hanya dapat dibatalkan selama berstatus “Menunggu konfirmasi”.</li>
+  </ul>
+  <h2>Data yang disimpan</h2>
+  <p>Keranjang dan pesanan disimpan di <em>localStorage</em> browser perangkatmu: nama, nomor telepon, dan alamat yang kamu isi di checkout hanya berada di perangkat ini. Tidak ada data yang dikirim ke server oleh situs ini. Kamu dapat menghapus riwayat kapan saja dari halaman Pesanan saya.</p>
+  <p>Saat kamu memilih mengirim pesanan atau reservasi lewat WhatsApp, isi pesan tersebut dikirim melalui WhatsApp dan tunduk pada kebijakan WhatsApp.</p>
+  <h2>Batasan</h2>
+  <ul>
+    <li>Tidak ada pembayaran sungguhan, QRIS atau rekening yang valid, dan tidak ada kartu yang diproses.</li>
+    <li>Status pesanan tidak real-time; di mode demo status diubah manual lewat tombol demo.</li>
+    <li>Untuk operasional nyata dibutuhkan backend, database, validasi harga di server, dan payment gateway.</li>
+  </ul>
+</div>
+</main>
+<script src="js/config.js"></script>
+<script src="js/data/menu.js"></script>
+<script src="js/store.js"></script>
+<script src="js/ui.js"></script>
+</body>
+</html>
